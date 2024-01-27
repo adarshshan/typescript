@@ -1,10 +1,12 @@
-//inferTypes (Implicit types)
+//-----inferTypes (Implicit types)
+
 // let userName='Adarsh';
 // let toatal=30_0000;
 // toatal='100';
 
 
-//Defining type (explicit types)
+//----Defining type (explicit types)
+
 // let userName: string = 'Adarsh'
 // let subscriber: number = 30_000;
 // let subscribed: boolean = true;
@@ -16,30 +18,68 @@
 //     salary:96000
 // };
 
-//INTERFACE
 
-interface Details {
+
+//-----INTERFACE
+
+// interface Details {
+//     name: string;
+//     age: number;
+//     salary: number;
+//     getName: () => void;
+// }
+
+// let userDetails: Details = {
+//     name: 'Adarsh',
+//     age: 23,
+//     salary: 98_000,
+//     getName() {
+//         console.log(this.name);
+
+//     },
+
+// };
+// let adminDetails: Details = {
+//     name: 'Adarsh shanu',
+//     age: 25,
+//     salary: 2_00_000,
+//     getName() {
+//         console.log(this.name);
+//     },
+// };
+
+
+
+//-------TYPE
+
+// type Details = {
+//     name: string;
+//     age: number;
+//     salary: number;
+//     getName: () => void;
+// }
+// let userDetails: Details = {
+//     name: 'Adarsh',
+//     age: 23,
+//     salary: 98_000,
+//     getName() {
+//         console.log(this.name);
+//     },
+// };
+
+
+
+// ---UNION / OPTIONAL
+
+type Details = {
     name: string;
-    age: number;
-    salary: number;
-    getName: () => void;
+    age: number | String;
+    salary?: number;
+    getName?: () => void;
 }
-
 let userDetails: Details = {
     name: 'Adarsh',
-    age: 23,
-    salary: 98_000,
-    getName() {
-        console.log(this.name);
-
-    },
-
+    age: '23',
 };
-let adminDetails: Details = {
-    name: 'Adarsh shanu',
-    age: 25,
-    salary: 2_00_000,
-    getName() {
-        console.log(this.name);
-    },
-};
+
+let skills: (string | number)[] = ['javascript', 'css', 'html', 34, 566, 775, 9000];

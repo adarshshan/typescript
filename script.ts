@@ -71,6 +71,22 @@
 
 // ---UNION / OPTIONAL
 
+// type Details = {
+//     name: string;
+//     age: number | String;
+//     salary?: number;
+//     getName?: () => void;
+// }
+// let userDetails: Details = {
+//     name: 'Adarsh',
+//     age: '23',
+// };
+
+// let skills: (string | number)[] = ['javascript', 'css', 'html', 34, 566, 775, 9000];
+
+
+//FUNCTION
+
 type Details = {
     name: string;
     age: number | String;
@@ -81,5 +97,16 @@ let userDetails: Details = {
     name: 'Adarsh',
     age: '23',
 };
+let adminDetails: Details = {
+    name: 'Adarsh shanu',
+    age: 25,
+    salary: 2_00_000,
+    getName() {
+        console.log(this.name);
+    },
+};
 
-let skills: (string | number)[] = ['javascript', 'css', 'html', 34, 566, 775, 9000];
+function getUserName(userDetails: Details, adminDetails: Details) {
+    return userDetails.age //suggession will be available here
+}
+getUserName(userDetails, adminDetails)

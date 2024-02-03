@@ -1,14 +1,14 @@
 //GENERICS
 
-function getAge<T>(age: T): T {
+function getAg<T>(age: T): T {
     return age;
 }
 
-getAge(23)//act as infer
-getAge('23');//act as infer
+getAg(23)//act as infer
+getAg('23');//act as infer
 
-getAge<string>('23')
-getAge<number>(23)
+getAg<string>('23')
+getAg<number>(23)
 
 
 

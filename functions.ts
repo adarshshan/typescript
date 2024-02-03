@@ -1,16 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
 //FUNCTION
 
 type Details = {
@@ -19,7 +7,7 @@ type Details = {
     salary?: number;
     getName?: () => void;
 }
-let userDetails: Details = {
+let userDetailssss: Details = {
     name: 'Adarsh',
     age: '23',
 };
@@ -39,7 +27,7 @@ function getname({ name, age }: { name: String; age: number | String }) {//inlin
     return name
 }
 
-function getAge(userDetails: Details):string{
+function getAge(userDetails: Details): string {
     return userDetails.name;
 }
 //if there is no return 
@@ -49,3 +37,12 @@ function getAge(userDetails: Details):string{
 // getUserName(userDetails, adminDetails)
 let newValue = getAge(userDetails);
 newValue.length;
+
+
+
+// returning whole object
+
+function getObject(userDetail: Details): Details {
+    return { name: userDetail.name, age: userDetail.age }
+}
+console.log(getObject(userDetailssss))
